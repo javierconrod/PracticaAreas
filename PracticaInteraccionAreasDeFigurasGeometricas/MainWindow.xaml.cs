@@ -27,28 +27,75 @@ namespace PracticaInteraccionAreasDeFigurasGeometricas
 
         private void btnCalcularRectangulo_Click(object sender, RoutedEventArgs e)
         {
-            float areaRectangulo = float.Parse(txtRectanguloBase.Text) * float.Parse(txtRectanguloAltura.Text);
-            lblRectanguloArea.Text = areaRectangulo.ToString();
+           /* float areaRectangulo = float.Parse(txtRectanguloBase.Text) * float.Parse(txtRectanguloAltura.Text);
+            lblRectanguloArea.Text = areaRectangulo.ToString();*/
         }
 
         private void btnCalcularTriangulo_Click(object sender, RoutedEventArgs e)
         {
-            float areaTriangulo = float.Parse(txtTrianguloAltura.Text) * float.Parse(txtTrianguloBase.Text) / 2;
-            lblTrianguloArea.Text = areaTriangulo.ToString();
+            /*float areaTriangulo = float.Parse(txtTrianguloAltura.Text) * float.Parse(txtTrianguloBase.Text) / 2;
+            lblTrianguloArea.Text = areaTriangulo.ToString();*/
         }
 
         private void btnCalcularCirculo_Click(object sender, RoutedEventArgs e)
         {
-            float Pi = Convert.ToSingle(Math.PI);
+           /* float Pi = Convert.ToSingle(Math.PI);
             float areaCirculo = float.Parse(txtCirculoRadio.Text) * float.Parse(txtCirculoRadio.Text) * Pi;
-            lblCirculoArea.Text = areaCirculo.ToString();
+            lblCirculoArea.Text = areaCirculo.ToString();*/
         }
 
         private void btnCalcularTrapecio_Click(object sender, RoutedEventArgs e)
         {
-            float sumas = float.Parse(txtTrapecioBaseMenor.Text) + float.Parse(txtTrapecioBaseMayor.Text);
+           /* float sumas = float.Parse(txtTrapecioBaseMenor.Text) + float.Parse(txtTrapecioBaseMayor.Text);
             float areaTrapecio = float.Parse(txtTrapecioAltura.Text) / 2 * sumas;
-            lblTrapecioArea.Text = areaTrapecio.ToString();
+            lblTrapecioArea.Text = areaTrapecio.ToString();*/
+        }
+
+        private void cbTipoFigura_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            panelConfiguracion.Children.Clear();
+            switch (cbTipoFigura.SelectedIndex)
+            {
+                case 0: //rectangulo
+                    panelConfiguracion.Children.Add(new ControlAreaRectangulo());
+                    break;
+                case 1: //triangulo
+                    panelConfiguracion.Children.Add(new ControlTriangulo());
+                    break;
+                case 2: //circulo
+                    panelConfiguracion.Children.Add(new ControlCirculo());
+                    break;
+                case 3: //trapecio
+                    panelConfiguracion.Children.Add(new ControlTrapecio());
+                    break;
+                default:
+                    break;
+            }
+         }
+
+        private void btnCalcular(object sender, RoutedEventArgs e)
+        {
+            double area = 0.0;
+            
+            switch(cbTipoFigura.SelectedIndex)
+            {
+                case 0: //rectangulo
+
+                    break;
+                case 1: //triangulo
+
+                    break;
+                case 2: //circulo
+
+                    break;
+                case 3: //trapecio
+
+                    break;
+                default:
+                    break;
+            }
+            lblArea.Text = area.ToString();
+        }
         }
     }
 }

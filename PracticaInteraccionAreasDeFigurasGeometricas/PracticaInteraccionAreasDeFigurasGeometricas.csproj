@@ -55,6 +55,22 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="ControlAreaRectangulo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlCirculo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlTrapecio.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlTriangulo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -62,6 +78,18 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ControlAreaRectangulo.xaml.cs">
+      <DependentUpon>ControlAreaRectangulo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ControlCirculo.xaml.cs">
+      <DependentUpon>ControlCirculo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ControlTrapecio.xaml.cs">
+      <DependentUpon>ControlTrapecio.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ControlTriangulo.xaml.cs">
+      <DependentUpon>ControlTriangulo.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

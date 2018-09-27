@@ -9,72 +9,34 @@
     <Grid Margin="15">
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="229*"/>
+            <ColumnDefinition Width="229*"/>
+            <ColumnDefinition Width="177*"/>
+            <ColumnDefinition Width="127*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="40px"/>
             <RowDefinition Height="30px"/>
             <RowDefinition Height="20px"/>
-            <RowDefinition Height="35px"/>
-            <RowDefinition Height="30px"/>
-            <RowDefinition Height="20px"/>
-            <RowDefinition Height="35px"/>
-            <RowDefinition Height="30px"/>
-            <RowDefinition Height="20px"/>
-            <RowDefinition Height="35px"/>
-            <RowDefinition Height="30px"/>
-            <RowDefinition Height="20px"/>
-            <RowDefinition Height="35px"/>
-            <RowDefinition Height="20px"/>
-            <RowDefinition Height="35px"/>
-            <RowDefinition Height="*"/>
+
         </Grid.RowDefinitions>
-        
+
         <TextBlock  Grid.ColumnSpan="4" Text="Áreas de Figuras Geométricas"/>
-        
-        <TextBlock Grid.Row="1" Text="Rectángulo"/>
 
-        <TextBlock Grid.Row="2" Text="Base:"/>
-        <TextBlock Grid.Row="2" Grid.Column="1"  Text="Altura:"/>
-        <TextBox x:Name="txtRectanguloBase" Grid.Row="3" Text="0"/>
-        <TextBox x:Name="txtRectanguloAltura" Grid.Row="3" Grid.Column="1" Text="0"/>
-        <Button x:Name="btnCalcularRectangulo" Content="Calcular" Grid.Row="3" Grid.Column="2"  Width="130" Click="btnCalcularRectangulo_Click"/>
-        <TextBlock Grid.Row="2" Grid.Column="3"  Text="Área:"/>
-        <TextBlock x:Name="lblRectanguloArea" Grid.Row="3" Grid.Column="3"  Text="0.0"/>
+        <Button x:Name="btnCalcularArea" Content="Calcular" Grid.Row="2" Grid.Column="2" Click="btnCalcular"/>
+        <TextBlock Grid.Row="1" Grid.Column="3"  Text="Área:" Margin="10,0,0,0"/>
+        <TextBlock x:Name="lblArea" Grid.Row="2" Grid.Column="3"  Text="0.0" Margin="10,0,0,0"/>
 
-        <TextBlock Grid.Row="4" Text="Triángulo"/>
+        <ComboBox Name="cbTipoFigura" Grid.Column="0" Grid.Row="1" SelectionChanged="cbTipoFigura_SelectionChanged">
+            <ComboBoxItem>Rectangulo</ComboBoxItem>
+            <ComboBoxItem>Triangulo</ComboBoxItem>
+            <ComboBoxItem>Círculo</ComboBoxItem>
+            <ComboBoxItem>Trapecio</ComboBoxItem>
+        </ComboBox>
+        <StackPanel Name="panelConfiguracion" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,0,0,-140">
+            
+        </StackPanel>
 
-        <TextBlock Grid.Row="5" Text="Base:"/>
-        <TextBlock Grid.Row="5" Grid.Column="1"  Text="Altura:"/>
-        <TextBox x:Name="txtTrianguloBase" Grid.Row="6" Text="0"/>
-        <TextBox x:Name="txtTrianguloAltura" Grid.Row="6" Grid.Column="1" Text="0"/>
-        <Button x:Name="btnCalcularTriangulo" Content="Calcular" Grid.Row="6" Grid.Column="2"  Width="130" Click="btnCalcularTriangulo_Click"/>
-        <TextBlock Grid.Row="5" Grid.Column="3"  Text="Área:"/>
-        <TextBlock x:Name="lblTrianguloArea" Grid.Row="6" Grid.Column="3"  Text="0.0"/>
-
-        <TextBlock Grid.Row="7" Text="Círculo"/>
-
-        <TextBlock Grid.Row="8" Text="Radio:"/>
-        <TextBox x:Name="txtCirculoRadio" Grid.Row="9" Text="0"/>
-        <Button x:Name="btnCalcularCirculo" Content="Calcular" Grid.Row="9" Grid.Column="2" Width="130" Click="btnCalcularCirculo_Click"/>
-        <TextBlock Grid.Row="8" Grid.Column="3"  Text="Área:"/>
-        <TextBlock x:Name="lblCirculoArea" Grid.Row="9" Grid.Column="3"  Text="0.0"/>
-
-        <TextBlock Grid.Row="10" Text="Trapecio"/>
-
-        <TextBlock Grid.Row="11" Text="Base mayor:"/>
-        <TextBlock Grid.Row="11" Grid.Column="1"  Text="Base menor:"/>
-        <TextBlock Grid.Row="13" Text="Altura:"/>
-        <TextBox x:Name="txtTrapecioBaseMayor" Grid.Row="12" Text="0"/>
-        <TextBox x:Name="txtTrapecioBaseMenor" Grid.Row="12" Grid.Column="1" Text="0"/>
-        <TextBox x:Name="txtTrapecioAltura" Grid.Row="14" Text="0" />
-        <Button x:Name="btnCalcularTrapecio" Content="Calcular" Grid.Row="12" Grid.Column="2"  Width="130" Click="btnCalcularTrapecio_Click"/>
-        <TextBlock Grid.Row="11" Grid.Column="3"  Text="Área:"/>
-        <TextBlock x:Name="lblTrapecioArea" Grid.Row="12" Grid.Column="3"  Text="0.0"/>
-        
 
     </Grid>
 </Window>
