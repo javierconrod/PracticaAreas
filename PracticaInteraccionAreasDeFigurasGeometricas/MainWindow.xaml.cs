@@ -80,13 +80,21 @@ namespace PracticaInteraccionAreasDeFigurasGeometricas
             switch(cbTipoFigura.SelectedIndex)
             {
                 case 0: //rectangulo
+                    var controlAreaRectangulo = ((ControlAreaRectangulo)(panelConfiguracion.Children[0]));
 
+                    float alturaRec = float.Parse(controlAreaRectangulo.txtRectanguloAltura.Text);
+                    float baseRec = float.Parse(controlAreaRectangulo.txtRectanguloBase.Text);
+
+                    area = baseRec * alturaRec;
                     break;
                 case 1: //triangulo
 
                     break;
                 case 2: //circulo
-
+                    var controlCirculo = (ControlCirculo)(panelConfiguracion.Children[0]);
+                    float radio = float.Parse(controlCirculo.txtCirculoRadio.Text);
+                    float pi = Convert.ToSingle(Math.PI);
+                    area = pi * radio * radio;
                     break;
                 case 3: //trapecio
 
@@ -98,4 +106,4 @@ namespace PracticaInteraccionAreasDeFigurasGeometricas
         }
         }
     }
-}
+
