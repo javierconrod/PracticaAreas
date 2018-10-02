@@ -88,7 +88,11 @@ namespace PracticaInteraccionAreasDeFigurasGeometricas
                     area = baseRec * alturaRec;
                     break;
                 case 1: //triangulo
+                    var controlAreaTriangulo = ((ControlTriangulo)(panelConfiguracion.Children[0]));
+                    float alturaTri = float.Parse(controlAreaTriangulo.txtTrianguloAltura.Text);
+                    float baseTri = float.Parse(controlAreaTriangulo.txtTrianguloBase.Text);
 
+                    area = baseTri * alturaTri / 2;
                     break;
                 case 2: //circulo
                     var controlCirculo = (ControlCirculo)(panelConfiguracion.Children[0]);
@@ -97,6 +101,12 @@ namespace PracticaInteraccionAreasDeFigurasGeometricas
                     area = pi * radio * radio;
                     break;
                 case 3: //trapecio
+                    var controlAreaTrapecio = (ControlTrapecio)(panelConfiguracion.Children[0]);
+                    float baseMenor = float.Parse(controlAreaTrapecio.txtTrapecioBaseMenor.Text);
+                    float baseMayor = float.Parse(controlAreaTrapecio.txtTrapecioBaseMayor.Text);
+                    float alturaTra = float.Parse(controlAreaTrapecio.txtTrapecioAltura.Text);
+
+                    area = (baseMayor + baseMenor) * (alturaTra / 2);
 
                     break;
                 default:
